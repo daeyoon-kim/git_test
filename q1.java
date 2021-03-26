@@ -1,46 +1,36 @@
 package kdy;
 
-public class q1 {
+public class q5 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-        int num1 = 10;
-        int num2 = 2;
-        
-        char operator = '+';
-        
-        if (num1 >= 10) {
-        System.out.println(num1 + 5);
+		int lineCount = 9;  //다른 홀수 값을 넣어보세요
+		int spaceCount = lineCount/2 +1;
+		int starCount = 1;
+		
+		for(int i = 0; i<lineCount; i++) {
+			for(int j = 0; j<spaceCount; j++) {
+				System.out.print(' ');
+			}
+			for(int j=0; j<starCount; j++) {
+				System.out.print('*');
+			}
+			for(int j = 0; j<spaceCount; j++) {
+				System.out.print(' ');
+			}
+			
+			if(i < lineCount/2) {
+				spaceCount-=1;
+				starCount+=2;
+			}
+			else {
+				spaceCount+=1;
+				starCount-=2;
+			}
+			System.out.println();
         }
-        
-        else {
-        System.out.println(num2 + 10); 
-        }
-        
-        char console = '-';
-        if (num2 >= 4) {
-        	System.out.println(num1 - 6);
-        }
-        else {
-        	System.out.println(num2 + 8);
-        }
-        
-        String number = "-"; 
-        
-        switch(number) {
-        case "+" : System.out.println(num1 + 50);
-        	break;
-        case "-" : System.out.println(num2 + 50);
-            break;
-        case "*" : System.out.println(num1 + 50);
-            break; 
-        case "/" : System.out.println(num2 + 50);
-            break;
-        }
+	}
+}
         
            
-       
-		
-	}
-
-}
+      
